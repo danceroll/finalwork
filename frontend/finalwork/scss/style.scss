@@ -1,0 +1,6 @@
+@import url(./typography.scss);
+@import url(./settings.scss);
+@import url(../foudations/node_modules/foundation-sites/scss/foundation.scss);
+@import url(./header.scss);
+
+@include foundation-everything;
