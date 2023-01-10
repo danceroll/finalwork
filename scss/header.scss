@@ -1,0 +1,32 @@
+@import 'colors';
+@import '../foudations/node_modules/foundation-sites/scss/foundation.scss';
+
+.header{
+    background-color: map-get($grey, background);
+    a {
+        color: map-get($grey, text);
+
+        &:hover {
+            color: darken map-get($grey, text), 20%;
+        }
+    }
+   
+    .language-selector{
+        display: flex;
+        list-style: none;
+
+        li{
+            padding: 5px 7px;
+
+            &:active {
+                
+                background-color: map-get($accent, default);
+                border-radius: 8px;
+
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
