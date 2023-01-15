@@ -2,31 +2,126 @@
 @import '../foudations/node_modules/foundation-sites/scss/foundation.scss';
 
 .header{
-    background-color: map-get($grey, background);
-    a {
-        color: map-get($grey, text);
+    
 
-        &:hover {
-            color: darken map-get($grey, text), 20%;
-        }
-    }
-   
-    .language-selector{
-        display: flex;
-        list-style: none;
+    .header-container {
+        padding: 10px 0;
+            align-items: center;
+            background-color: map-get($grey, background);
 
-        li{
-            padding: 5px 7px;
-
-            &:active {
-                
-                background-color: map-get($accent, default);
-                border-radius: 8px;
-
-                a{
-                    color: #fff;
-                }
+            .text-right{
+                padding-right: 15px;
             }
         }
+
+    a {
+            color: map-get($grey, text);
+            font-weight: 700;
+    
+            &:hover {
+                color: darken map-get($grey, text), 20%;
+            }
+        }
+
+        .language-selector {
+                display: flex;
+                list-style: none;
+                margin: 0;
+
+                li {
+                    padding: 5px 7px;
+                    
+                    a{
+                        display: inline-block;
+                        padding: 5px 7px;
+                    }
+                    
+                    &.active {
+
+                        a {
+                        color: #fff;
+                        background-color: map-get($accent, default);
+                        border-radius: 8px;
+                        }
+                    }
+        
+                    &::marker {
+                        display: none;
+                    }
+                }
+        }
+        .logo{
+            padding-left: 15px;
+        }
+   
+    .hamburger{
+        .header-menu {
+            @include hamburger;
+            margin-top: 23px;
+            }
+
+            .header-submenu{
+                display: none;
+                position: fixed;
+                bottom: 0;
+                left: 8px;
+                right: 8px;
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    list-style: none;
+                    margin: 0;
+                    padding: 20px 12px 12px;
+                    background-color: #fff;
+                    
+                    li{
+                        a{
+                            display: block;
+                            background-color: map-get($grey, background);
+                            padding: 7px 12px;
+                            font-weight: 700;
+                            border-radius: 12px;
+                            text-align: center;
+                            color: map-get($active, default);
+                        }
+
+                        a:hover{
+                            color: map-get($accent, default);
+                        }
+                    }
+                }
+
+                &::before{
+                    content: '';
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                    background-color: map-get($main, default);
+                }
+            .header-close-menu{
+                background-color: #fff;
+                right: 0;
+                border-radius: 12px 12px 0px 0px;
+            }
+            .exit{
+                cursor: pointer;
+                margin-top: 12px;
+                margin-right: 12px;
+
+            }
+            }
     }
+    input{
+        display: none;
+
+        &:checked ~ .header-submenu{
+            display: block;
+        }
+    }
+    
 }
