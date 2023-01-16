@@ -1,6 +1,10 @@
 @import 'colors';
 @import '../foudations/node_modules/foundation-sites/scss/foundation.scss';
 
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .header{
     
 
@@ -58,6 +62,9 @@
         .header-menu {
             @include hamburger;
             margin-top: 23px;
+            @media screen and (max-width: 0em), screen and (min-width: 768px){
+                display: none;
+            }
             }
 
             .header-submenu{

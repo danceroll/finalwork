@@ -1,14 +1,14 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Montserrat";
-  src: url(./Montserrat/Montserrat-VariableFont_wght.ttf);
+  src: url(../Montserrat/Montserrat-VariableFont_wght.ttf) format("woff2-variations");
   font-weight: 100 950;
   font-stretch: 75% 125%;
   font-style: normal;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url(./Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+  src: url(../Montserrat/Montserrat-Italic-VariableFont_wght.ttf) format("woff2-variations");
   font-weight: 100 950;
   font-stretch: 75% 125%;
   font-style: italic;
@@ -39,6 +39,10 @@
     margin: 0 auto;
   }
 }
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 .header .header-container {
   padding: 10px 0;
   align-items: center;
@@ -100,6 +104,11 @@
 .header .hamburger .header-menu:hover::after {
   background: #8a8a8a;
   box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a;
+}
+@media screen and (max-width: 0em), screen and (min-width: 768px) {
+  .header .hamburger .header-menu {
+    display: none;
+  }
 }
 .header .hamburger .header-submenu {
   display: none;
