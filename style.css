@@ -12,7 +12,12 @@
   margin: 50px auto 0;
 }
 .container .header .wrapper .logo {
-  margin-left: 60px;
+  margin-left: 160px;
+}
+@media (max-width: 1440px) {
+  .container .header .wrapper .logo {
+    margin-left: 60px;
+  }
 }
 .container .header .wrapper .top-navigation-block {
   max-width: 478px;
@@ -50,17 +55,13 @@
   letter-spacing: 1px;
 }
 .container .header .wrapper .top-contacts .address {
-  margin: auto 6px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
 }
 .container .header .wrapper .top-contacts .top-phone-link {
   text-decoration: none;
-  margin: auto 6px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 20px;
   color: #B3B3BA;
 }
 .container .header .wrapper .top-contacts .top-facebook-logo {
@@ -117,14 +118,25 @@
   display: flex;
   flex-direction: row;
   justify-content: start;
-  margin: 60px 180px;
-  column-gap: 30px;
+  margin-left: 280px;
+  margin-right: 280px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  gap: 30px;
   font-family: Montserrat, sans-serif;
   font-style: normal;
 }
-.container .main .content .main-text-content {
-  width: 942px;
-  height: 274px;
+@media (max-width: 1440px) {
+  .container .main .content {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+}
+@media (max-width: 1024px) {
+  .container .main .content {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
 }
 .container .main .content .main-text-content .main-title {
   font-weight: 700;
@@ -136,16 +148,20 @@
   background-clip: text;
 }
 .container .main .content .main-text-content p {
+  display: flex;
   padding-top: 28px;
   font-weight: 400;
   font-size: 19px;
   line-height: 30px;
   color: #000000;
+  align-self: stretch;
+}
+.container .main .content .vertical-line {
+  height: 100%;
 }
 .container .main .content .advantages {
   display: flex;
   flex-direction: column;
-  max-height: 322px;
 }
 .container .main .content .advantages .block {
   margin-bottom: 40px;
@@ -172,21 +188,38 @@
   line-height: 20px;
   color: #323264;
 }
-.container .main .content .main-bottom-text-content {
-  max-width: 938px;
-  max-height: 250px;
+.container .main .bottom-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin: 60px 280px;
+  gap: 30px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+}
+@media (max-width: 1440px) {
+  .container .main .bottom-content {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+}
+@media (max-width: 1024px) {
+  .container .main .bottom-content {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+.container .main .bottom-content .main-bottom-text-content {
   margin-bottom: 60px;
 }
-.container .main .content .main-bottom-text-content p {
+.container .main .bottom-content .main-bottom-text-content p {
   padding-bottom: 28px;
   font-weight: 400;
   font-size: 19px;
   line-height: 30px;
   color: #000000;
 }
-.container .main .content .main-bottom-title {
-  width: 362px;
-  height: 138px;
+.container .main .bottom-content .main-bottom-title {
   margin-left: 30px;
   font-weight: 700;
   font-size: 38px;
@@ -195,6 +228,22 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+.container .main .photo {
+  max-width: 1920px;
+  width: 100%;
+}
+@media (max-width: 1440px) {
+  .container .main .photo {
+    max-width: 1440px;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .container .main .photo {
+    max-width: 1024px;
+    width: 100%;
+  }
 }
 .container .footer {
   max-width: 1920px;
@@ -208,8 +257,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1920px;
   height: 263px;
+}
+@media (max-width: 1920px) {
+  .container .footer .footer-top {
+    max-width: 1920px;
+    width: 100%;
+  }
+}
+@media (max-width: 1440px) {
+  .container .footer .footer-top {
+    max-width: 1440px;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .container .footer .footer-top {
+    max-width: 1024px;
+    width: 100%;
+  }
 }
 .container .footer .footer-top .footer-title {
   padding: 30px 0;
@@ -222,24 +288,96 @@
   color: #323264;
 }
 .container .footer .footer-top .footer-logo {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container .footer .footer-top .footer-logo .images {
   display: flex;
   flex-direction: row;
+  gap: 40px;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+@media (max-width: 1024px) {
+  .container .footer .footer-top .footer-logo .images {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .container .footer .footer-top .footer-logo .images img {
+    max-width: 196px;
+    width: 100%;
+  }
+}
+@media (max-width: 1440px) {
+  .container .footer .footer-top .footer-logo .images {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .container .footer .footer-top .footer-logo .images img {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+@media (max-width: 1920px) {
+  .container .footer .footer-top .footer-logo .images {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  .container .footer .footer-top .footer-logo .images img {
+    max-width: 370px;
+    width: 100%;
+  }
 }
 .container .footer .footer-top .menu-dot-separator {
   padding: 30px 0;
 }
 .container .footer .footer-top .footer-line {
+  display: flex;
   align-items: center;
+  max-width: 1600px;
+  width: 100%;
+  height: 2px;
+}
+@media (max-width: 1440px) {
+  .container .footer .footer-top .footer-line {
+    max-width: 1320px;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .container .footer .footer-top .footer-line {
+    max-width: 904px;
+    width: 100%;
+  }
 }
 .container .footer .footer-bottom {
   display: flex;
   width: 1920px;
+  width: 100%;
   height: 141px;
+}
+@media (max-width: 1440px) {
+  .container .footer .footer-bottom {
+    max-width: 1440px;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .container .footer .footer-bottom {
+    max-width: 1024px;
+    width: 100%;
+  }
 }
 .container .footer .footer-bottom .footer-bottom-content {
   width: 1600px;
   height: 79px;
   margin: 0 160px;
+}
+@media (max-width: 1440px) {
+  .container .footer .footer-bottom .footer-bottom-content {
+    margin: 0 60px;
+  }
 }
 .container .footer .footer-bottom .footer-bottom-content .bottom-wrapper {
   display: flex;
